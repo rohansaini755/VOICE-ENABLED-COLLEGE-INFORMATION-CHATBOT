@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Voice Command Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    {% csrf_token %}
+    <div class="chat-window">
+      <div class="chat-header">
+        <h2>College Information Chatbot</h2>
+      </div>
+      <div class="chat-body" id="chat-bodyid" style="text-align: right;">
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="user-input" placeholder="Say something..." />
+        <button id="speak-btn">Speak</button>
+        <button id="stop" style="margin-left:2px;">Stop</button>
+      </div>
+    </div>
+    <div>
+      <p id="status" style="display:none;color:gray;margin-left:410px;margin-top:-20px;">Listenting...</p>
+    </div>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="/static/speechrecognition.js"></script>
+  </body>
+</html>
